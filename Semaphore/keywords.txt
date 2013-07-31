@@ -1,0 +1,5 @@
+Semaphore   KEYWORD1
+red         KEYWORD2
+yellow      KEYWORD2
+green       KEYWORD2
+off         KEYWORD2
