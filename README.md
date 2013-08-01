@@ -13,20 +13,18 @@ Quick reference
 ---------------
 
 
-
-```arduino
+```C++
 
 /* Include the library in your code */
 
 #include <Semaphore.h>
 
-/* .... */
-
-/* Declare your semaphore */
-
-/* pin 10: red led */
-/* pin 11: yellow led */
-/* pin 12: gren led */
+/*
+  Declare your semaphore:
+    * pin 10: red led
+    * pin 11: yellow led
+    * pin 12: gren led 
+*/
 
 Semaphore my_semaphore(10,11,12);
 
@@ -34,8 +32,8 @@ void setup(){
   /* no setup is needed */
 }
 
-void loop()
-{
+void loop(){
+
   /* switch on red ligth */
   my_semaphore.red();
   delay(3000);
@@ -56,7 +54,7 @@ void loop()
   my_semaphore.off();
 }
 
-``
+```
 
 Author
 ======
