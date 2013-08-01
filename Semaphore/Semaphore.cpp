@@ -10,35 +10,55 @@ Semaphore::Semaphore(int red_pin, int yellow_pin, int green_pin){
   _red_pin = red_pin;
   _yellow_pin = yellow_pin;
   _green_pin = green_pin;
-  
-  pinMode(_red_pin, OUTPUT);
-  pinMode(_yellow_pin, OUTPUT);
-  pinMode(_green_pin, OUTPUT);
+
+  if (_red_pin != DISABLE) {
+    pinMode(_red_pin, OUTPUT);
+  }
+  if (_yellow_pin != DISABLE) {
+    pinMode(_yellow_pin, OUTPUT);
+  }
+  if (_green_pin != DISABLE) {
+    pinMode(_green_pin, OUTPUT);
+  }
 }
 
 void Semaphore::red(){
-  off();
-  digitalWrite(_red_pin,HIGH);
+  if (_red_pin != DISABLE) {
+    off();
+    digitalWrite(_red_pin,HIGH);
+  }
 }
 
 void Semaphore::green(){
-  off();
-  digitalWrite(_green_pin,HIGH);
+  if (_green_pin != DISABLE) {
+    off();
+    digitalWrite(_green_pin,HIGH);
+  }
 }
 
 void Semaphore::yellow(){
-  off();
-  digitalWrite(_yellow_pin,HIGH);
+  if (_yellow_pin != DISABLE) {
+    off();
+    digitalWrite(_yellow_pin,HIGH);
+  }
 }
 
 void Semaphore::red_yellow(){
-  off();
-  digitalWrite(_yellow_pin,HIGH);
-  digitalWrite(_red_pin,HIGH);
+  if (_yellow_pin != DISABLE and _red_pin != DISABLE) {
+    off();
+    digitalWrite(_yellow_pin,HIGH);
+    digitalWrite(_red_pin,HIGH);
+  }
 }
 
 void Semaphore::off(){
-  digitalWrite(_red_pin,LOW);
-  digitalWrite(_yellow_pin,LOW);
-  digitalWrite(_green_pin,LOW);
+  if (_red_pin != DISABLE) {
+    digitalWrite(_red_pin,LOW);
+  }
+  if (_yellow_pin != DISABLE) {
+    digitalWrite(_yellow_pin,LOW);
+  }
+  if (_green_pin != DISABLE) {
+    digitalWrite(_green_pin,LOW);
+  }
 }

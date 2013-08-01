@@ -10,6 +10,8 @@
 
 #include "Arduino.h"
 
+#define DISABLE 0
+
 class Semaphore {
   public:
     Semaphore(int red_pin, int yellow_pin, int green_pin);

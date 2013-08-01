@@ -4,3 +4,5 @@ yellow      KEYWORD2
 green       KEYWORD2
 red_yellow  KEYWORD2
 off         KEYWORD2
+
+DISABLE     LITERAL1
