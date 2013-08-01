@@ -6,7 +6,7 @@
 
 #include "Semaphore.h"
 
-void Semaphore::Semaphore(int red_pin, int yellow_pin, int green_pin){
+Semaphore::Semaphore(int red_pin, int yellow_pin, int green_pin){
   _red_pin = red_pin;
   _yellow_pin = yellow_pin;
   _green_pin = green_pin;

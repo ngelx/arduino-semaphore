@@ -12,7 +12,7 @@
 
 class Semaphore {
   public:
-    semaphore(int red_pin, int yellow_pin, int green_pin);
+    Semaphore(int red_pin, int yellow_pin, int green_pin);
 
     void red();
     void yellow();
